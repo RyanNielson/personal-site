@@ -20,9 +20,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: RyanNielson
 github_username: RyanNielson
-google_analytics: UA-39338095-2
 rss: RSS
 permalink: /:year/:month/:title/
+google_analytics: UA-39338095-2
+disqus:
+  shortname: nielsonio
 
 # Build settings
 markdown: kramdown
@@ -34,9 +36,6 @@ theme: minima
 
 # Other settings
 host: 0.0.0.0
-
-disqus:
-  shortname: nielsonio
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
