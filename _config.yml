@@ -17,7 +17,7 @@ title: Ryan Nielson
 email: ryan.nielson@gmail.com
 description:  "The personal site and blog of Ryan Nielson."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://nielson.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://nielson.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: RyanNielson
 github_username: RyanNielson
 rss: RSS
