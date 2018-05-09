@@ -169,11 +169,11 @@ public class SpriteOutline : MonoBehaviour {
 
 Now that the hard work is done, add a few sprites to your scene. Change the material field of the `SpriteRenderer` component to the `SpriteOutline` material created above. You'll also want to add the `SpriteOutline` component to this game object to show a white outline by default. To hide the outline simply disable or remove the component.
 
-![Completed Sprite](/public/images/2016-04-08/gameobject.png "")
+![Completed Sprite](/public/images/2016-04-08/gameobject.png)
 
 With all that completed, you should now have a sprite with a white outline. In the inspector you can change the color to anything you'd like, independently from the `SpriteRenderer` color. The custom shader also maintains all existing functionality of the default sprite shader.
 
-![Completed Sprite](/public/images/2016-04-08/outlined.gif "")
+![Completed Sprite](/public/images/2016-04-08/outlined.gif)
 
 Please [download the demo project](/public/downloads/sprite_outlines.zip) and play around with it to get a better idea of how this technique looks and works. It contains a single scene with three examples of outlined sprites, one of which is animated.
 
