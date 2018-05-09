@@ -11,7 +11,7 @@ While reading Zack Bell's excellent [game development blog](http://zackbellgames
 
 This is the kind of effect that's possible using only the stencil buffer and a few sprites.
 
-![Surface Material Shader](/public/images/2015-12-07/splatter_gun2.gif "")
+![Surface Material Shader](/public/images/2015-12-07/splatter_gun2.gif)
 
 The stencil buffer is a pixel mask that can be used in shaders to save or discard pixels. It is simply a buffer where an integer is stored for each pixel. In your shader to can change the stencil buffer value, or optionally draw based on the stencil value. For more information on the stencil shader and various stencil operations, check out the [Unity documentation](http://docs.unity3d.com/Manual/SL-Stencil.html). This post will be about achieving a specific effect using the stencil buffer, not a run-down of everything it has to offer.
 

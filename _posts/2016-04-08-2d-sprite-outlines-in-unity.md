@@ -130,7 +130,7 @@ Shader "Sprites/Outline"
 
 Now create a new material called `SpriteOutline` and assign the newly created shader to it in the inspector.
 
-![Sprite Outline Material](/public/images/2016-04-08/material.png "")
+![Sprite Outline Material](/public/images/2016-04-08/material.png)
 
 Next create a new C# script and name it `SpriteOutline`. This component is going to handle updating our material in the editor and at runtime to toggle the outline off or on and also change the color. This component can also be targetted in an animation to enable or disable outlines for specific animation frames or to change the outline color.
 
