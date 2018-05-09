@@ -237,13 +237,13 @@ Shader "Splatter/Splatter"
 
 Now we need to make two materials, `Surface` and `Splatter`, and assign the new shaders to them using their shader dropdowns.
 
-![Surface Material Shader](/public/images/2015-12-07/surface_material_shader.png "")
+![Surface Material Shader](/public/images/2015-12-07/surface_material_shader.png)
 
-![Splatter Material Shader](/public/images/2015-12-07/splatter_material_shader.png "")
+![Splatter Material Shader](/public/images/2015-12-07/splatter_material_shader.png)
 
 Finally, add two objects with sprite renderers to the scene. One named Surface, and the other named Splatter. Assign whatever sprites you want to them, and make sure Splatter is drawn above Surface by increasing its `Order in Layer` or adding it to a different `Sorting Layer`. Now, add the corresponding materials that were created earlier to each sprite renderer. If you move the splatter back and forth over the surface, it should only be drawn on the pixels of the surface and masked everywhere else.
 
-![Splatter Demo](/public/images/2015-12-07/splatter_demo.gif "")
+![Splatter Demo](/public/images/2015-12-07/splatter_demo.gif)
 
 Please [download the demo project](/public/downloads/splatter_demo.zip) and play around with it to get a better idea of how this looks. It contains two scenes, Demo1 and Demo2. Demo1 contains a surface and a splatter sprite. Move the splatter sprite around to give you an idea of how this effect works. Demo2 contains many surfaces and the ability to shoot splatters as shown near the top of this post. Splatter will be shot from the center of the screen towards your mouse cursor when the mouse is clicked, and explode on the first surface that is hit.
 
