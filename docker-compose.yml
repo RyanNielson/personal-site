@@ -2,7 +2,7 @@ version: '3'
 services:
   jekyll:
     build: .
-    command: bundle exec jekyll serve
+    command: bundle exec jekyll serve --force-polling
     volumes:
       - .:/site
     ports:
