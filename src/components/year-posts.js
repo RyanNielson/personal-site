@@ -11,7 +11,7 @@ const YearPosts = ({ year, posts }) => {
               <h3>
                 <a
                   className="text-2xl font-normal no-underline hover:underline text-blue"
-                  href="/2018/05/fixing-automatic-reload-of-code-changes-in-ruby-on-rails-while-using-docker/"
+                  href={post.node.fields.slug}
                 >
                   {post.node.frontmatter.title}
                 </a>

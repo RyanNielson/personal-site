@@ -33,9 +33,36 @@
   * Or if using a preprocessor or `postcss-import`:
   *
   * @import "components/buttons";
-  * @import "components/forms";
   */
- 
+
+.icon-link {
+  @apply text-grey-darker no-underline;
+}
+
+.icon-link span {
+  @apply ml-1 text-blue;
+}
+
+.icon-link:hover span {
+  @apply underline text-black;
+}
+
+.blog-post p {
+  @apply mb-4;
+}
+
+.blog-post code {
+  @apply p-1 !important;
+}
+
+a {
+  @apply text-blue no-underline;
+}
+
+a:hover {
+  @apply text-black;
+}
+
  /**
   * This injects all of Tailwind's utility classes, generated based on your
   * config file.

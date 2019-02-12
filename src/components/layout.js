@@ -31,7 +31,7 @@ class Layout extends React.Component {
 
     return (
       // container mx-auto flex sm:justify-between flex-col text-center sm:flex-row sm:text-left font-sans py-1 px-0 sm:px-4 sm:py-6 sm:items-baseline
-      <div className="font-sans font-normal">
+      <div className="font-sans font-normal leading-normal">
         <header className="border-b">
           <div className="container flex justify-between items-baseline py-3 ">
             <Link
@@ -79,25 +79,25 @@ class Layout extends React.Component {
                 <li>
                   <a
                     href="https://github.com/RyanNielson"
-                    className="text-blue no-underline hover:underline"
+                    className="icon-link"
                   >
-                    <FaGithub /> RyanNielson
+                    <FaGithub />
+                    <span>RyanNielson</span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://www.twitter.com/RyanNielson"
-                    className="text-blue no-underline hover:underline"
+                    className="icon-link"
                   >
-                    <FaTwitter /> RyanNielson
+                    <FaTwitter />
+                    <span>RyanNielson</span>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/feed.xml"
-                    className="text-blue no-underline hover:underline"
-                  >
-                    <FaRss /> RSS
+                  <a href="/feed.xml" className="icon-link">
+                    <FaRss />
+                    <span>RSS</span>
                   </a>
                 </li>
               </ul>
