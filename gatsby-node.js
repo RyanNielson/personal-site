@@ -1,52 +1,70 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-// You can delete this file if you're not using it
-const path = require('path');
-
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const BlogPost = path.resolve('src/templates/BlogPost.js');
 
-  return graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [fields___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-              date
-            }
-            frontmatter {
-              title
+  const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  return graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [fields___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+                date
+              }
+              frontmatter {
+                title
+              }
             }
           }
         }
       }
-    }
-  `).then(result => {
+    `,
+  ).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors);
+      throw result.errors;
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    // Create blog posts pages.
+    const posts = result.data.allMarkdownRemark.edges;
+
+    posts.forEach((post, index) => {
+      // const previous =
+      //   index === posts.length - 1 ? null : posts[index + 1].node;
+      // const next = index === 0 ? null : posts[index - 1].node;
+
       createPage({
-        path: node.fields.slug,
-        component: BlogPost,
+        path: post.node.fields.slug,
+        component: blogPost,
         context: {
-          slug: node.fields.slug,
-          date: node.fields.date,
+          slug: post.node.fields.slug,
+          date: post.node.fields.date,
+          // previous,
+          // next,
         },
       });
     });
   });
 };
+
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions
+
+//   if (node.internal.type === `MarkdownRemark`) {
+//     const value = createFilePath({ node, getNode })
+//     createNodeField({
+//       name: `slug`,
+//       node,
+//       value,
+//     })
+//   }
+// }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -67,6 +85,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: 'date',
       node,
       value: `${year}-${month}-${day}`,
+    });
+
+    createNodeField({
+      name: 'year',
+      node,
+      value: year,
     });
   }
 };
