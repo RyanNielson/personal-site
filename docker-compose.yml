@@ -1,9 +1,0 @@
-version: '3'
-services:
-  jekyll:
-    build: .
-    command: bundle exec jekyll serve --force-polling
-    volumes:
-      - .:/site
-    ports:
-      - "4000:4000"
