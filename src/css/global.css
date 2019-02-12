@@ -56,7 +56,7 @@
 }
 
 a {
-  @apply text-blue no-underline;
+  @apply text-blue no-underline outline-none;
 }
 
 a:hover {
