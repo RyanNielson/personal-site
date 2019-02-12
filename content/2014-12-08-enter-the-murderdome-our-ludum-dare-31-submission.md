@@ -13,9 +13,9 @@ After about an hour of brainstorming on Friday night, we came up with the idea f
 
 [Play Enter the Murderdome](http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=13891)
 
-![Title screen](/public/images/2014-12-08/murderdome-1.png "Title screen")
+![Title screen](/assets/images/2014-12-08/murderdome-1.png "Title screen")
 
-![Gameplay](/public/images/2014-12-08/murderdome-2.png "Gameplay")
+![Gameplay](/assets/images/2014-12-08/murderdome-2.png "Gameplay")
 
 If you have any comments or suggestions feel free to vote/comment on the page linked above, or post a comment here. The ugly source code is also available on [GitHub](https://github.com/RyanNielson/ludum-dare-31) if you're interesting in seeing how the game works under the hood.
 

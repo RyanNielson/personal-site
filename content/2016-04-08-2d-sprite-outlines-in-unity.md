@@ -130,7 +130,7 @@ Shader "Sprites/Outline"
 
 Now create a new material called `SpriteOutline` and assign the newly created shader to it in the inspector.
 
-![Sprite Outline Material](/public/images/2016-04-08/material.png)
+![Sprite Outline Material](/assets/images/2016-04-08/material.png)
 
 Next create a new C# script and name it `SpriteOutline`. This component is going to handle updating our material in the editor and at runtime to toggle the outline off or on and also change the color. This component can also be targetted in an animation to enable or disable outlines for specific animation frames or to change the outline color.
 
@@ -169,19 +169,19 @@ public class SpriteOutline : MonoBehaviour {
 
 Now that the hard work is done, add a few sprites to your scene. Change the material field of the `SpriteRenderer` component to the `SpriteOutline` material created above. You'll also want to add the `SpriteOutline` component to this game object to show a white outline by default. To hide the outline simply disable or remove the component.
 
-![Completed Sprite](/public/images/2016-04-08/gameobject.png)
+![Completed Sprite](/assets/images/2016-04-08/gameobject.png)
 
 With all that completed, you should now have a sprite with a white outline. In the inspector you can change the color to anything you'd like, independently from the `SpriteRenderer` color. The custom shader also maintains all existing functionality of the default sprite shader.
 
-![Completed Sprite](/public/images/2016-04-08/outlined.gif)
+![Completed Sprite](/assets/images/2016-04-08/outlined.gif)
 
-Please [download the demo project](/public/downloads/sprite_outlines.zip) and play around with it to get a better idea of how this technique looks and works. It contains a single scene with three examples of outlined sprites, one of which is animated.
+Please [download the demo project](/assets/downloads/sprite_outlines.zip) and play around with it to get a better idea of how this technique looks and works. It contains a single scene with three examples of outlined sprites, one of which is animated.
 
 Shaders can be complicated, but they are very powerful and make it quite easy to implement graphical features, even in 2D. If you have any further questions please feel free to message me on Twitter [@RyanNielson](https://twitter.com/ryannielson) or comment below.
 
 ### Update (June 2, 2016)
 
-Some people have been asking about how to change the thickness of the sprite outlines. Please [download this new demo project](/public/downloads/sprite_outlines_variable.zip) with the changes to add this functionality. Changes were made to both the shader and component. Just adjust the outline size slider on the sprite outline component to change outline size. There is a limited outline size of 16 to prevent issues with shader for loop unrolling. It hasn't been tested throughly, so your results may vary, but it's probably a good place to start.
+Some people have been asking about how to change the thickness of the sprite outlines. Please [download this new demo project](/assets/downloads/sprite_outlines_variable.zip) with the changes to add this functionality. Changes were made to both the shader and component. Just adjust the outline size slider on the sprite outline component to change outline size. There is a limited outline size of 16 to prevent issues with shader for loop unrolling. It hasn't been tested throughly, so your results may vary, but it's probably a good place to start.
 
 ### Update (April 7, 2017)
-Unity 5.6 has been released, and along with that came some changes to the default sprite shader. Unfortunetely this seems to be causing issues with parts of the method used above. Please [download this new demo project](/public/downloads/sprite_outlines_56.zip) which changes the sprite outline shader to incorporate the 5.6 shader changes.
+Unity 5.6 has been released, and along with that came some changes to the default sprite shader. Unfortunetely this seems to be causing issues with parts of the method used above. Please [download this new demo project](/assets/downloads/sprite_outlines_56.zip) which changes the sprite outline shader to incorporate the 5.6 shader changes.

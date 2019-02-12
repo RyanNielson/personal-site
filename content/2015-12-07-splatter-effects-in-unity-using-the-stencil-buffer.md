@@ -11,7 +11,7 @@ While reading Zack Bell's excellent [game development blog](http://zackbellgames
 
 This is the kind of effect that's possible using only the stencil buffer and a few sprites.
 
-![Surface Material Shader](/public/images/2015-12-07/splatter_gun2.gif)
+![Surface Material Shader](/assets/images/2015-12-07/splatter_gun2.gif)
 
 The stencil buffer is a pixel mask that can be used in shaders to save or discard pixels. It is simply a buffer where an integer is stored for each pixel. In your shader to can change the stencil buffer value, or optionally draw based on the stencil value. For more information on the stencil shader and various stencil operations, check out the [Unity documentation](http://docs.unity3d.com/Manual/SL-Stencil.html). This post will be about achieving a specific effect using the stencil buffer, not a run-down of everything it has to offer.
 
@@ -237,14 +237,14 @@ Shader "Splatter/Splatter"
 
 Now we need to make two materials, `Surface` and `Splatter`, and assign the new shaders to them using their shader dropdowns.
 
-![Surface Material Shader](/public/images/2015-12-07/surface_material_shader.png)
+![Surface Material Shader](/assets/images/2015-12-07/surface_material_shader.png)
 
-![Splatter Material Shader](/public/images/2015-12-07/splatter_material_shader.png)
+![Splatter Material Shader](/assets/images/2015-12-07/splatter_material_shader.png)
 
 Finally, add two objects with sprite renderers to the scene. One named Surface, and the other named Splatter. Assign whatever sprites you want to them, and make sure Splatter is drawn above Surface by increasing its `Order in Layer` or adding it to a different `Sorting Layer`. Now, add the corresponding materials that were created earlier to each sprite renderer. If you move the splatter back and forth over the surface, it should only be drawn on the pixels of the surface and masked everywhere else.
 
-![Splatter Demo](/public/images/2015-12-07/splatter_demo.gif)
+![Splatter Demo](/assets/images/2015-12-07/splatter_demo.gif)
 
-Please [download the demo project](/public/downloads/splatter_demo.zip) and play around with it to get a better idea of how this looks. It contains two scenes, Demo1 and Demo2. Demo1 contains a surface and a splatter sprite. Move the splatter sprite around to give you an idea of how this effect works. Demo2 contains many surfaces and the ability to shoot splatters as shown near the top of this post. Splatter will be shot from the center of the screen towards your mouse cursor when the mouse is clicked, and explode on the first surface that is hit.
+Please [download the demo project](/assets/downloads/splatter_demo.zip) and play around with it to get a better idea of how this looks. It contains two scenes, Demo1 and Demo2. Demo1 contains a surface and a splatter sprite. Move the splatter sprite around to give you an idea of how this effect works. Demo2 contains many surfaces and the ability to shoot splatters as shown near the top of this post. Splatter will be shot from the center of the screen towards your mouse cursor when the mouse is clicked, and explode on the first surface that is hit.
 
 The stencil buffer is a great feature that allows for all kinds of interesting effects, and makes it easy to draw simple paint and blood splatter using the approach above. Check out Prime31's [post about sprite occlusion](http://blog.prime31.com/using-the-stencil-buffer-for-sprite-occlusion) for another example of what the stencil buffer makes possible. If you have any further questions please feel free to message me on Twitter [@RyanNielson](https://twitter.com/ryannielson) or comment below.

@@ -11,7 +11,7 @@ I'm working on a new prototype of a 2D local multiplayer space game. I wanted to
 
 I'm working in Unity, so the code below is in a `MonoBehaviour` class. It should be attached to a `GameObject` with the `Camera` component. This could be improved in many ways, but it served its purpose for my prototype. Below is a short gif that showing the camera tracking three targets (green and red), the code for the component, and short explanations of each method at the end of this post.
 
-![Target Tracking Orthographic Camera](/public/images/target_camera.gif "The camera tracking three targets (green and red)")
+![Target Tracking Orthographic Camera](/assets/images/target_camera.gif "The camera tracking three targets (green and red)")
 
 ```csharp
 using UnityEngine;

@@ -94,12 +94,6 @@ class Layout extends React.Component {
                     <span>RyanNielson</span>
                   </a>
                 </li>
-                <li>
-                  <a href="/feed.xml" className="icon-link">
-                    <FaRss />
-                    <span>RSS</span>
-                  </a>
-                </li>
               </ul>
 
               <div>
@@ -110,15 +104,6 @@ class Layout extends React.Component {
             </div>
           </div>
         </footer>
-        {/* <div className="font-sans container">
-          <header>{header}</header>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div> */}
       </div>
     );
   }

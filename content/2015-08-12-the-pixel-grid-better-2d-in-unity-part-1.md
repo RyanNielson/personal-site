@@ -13,9 +13,9 @@ This first post in the series will focus on the pixel grid and how to lock items
 
 The first image is an example of sub-pixel character movement where the player sprite pixels aren't lined up properly with other pixels in the scene. The second is a gif that shows how sub-pixel camera movement can lead to strange rendering artifacts where pixels have different widths. It's subtle in the gif, but if you focus on the ground sprite pixels you can see them changing width as the camera moves.
 
-![Sub-pixel Movement](/public/images/2015-08-12/subpixel.png "The bottom of the character is an example of sub-pixel movement.")
+![Sub-pixel Movement](/assets/images/2015-08-12/subpixel.png "The bottom of the character is an example of sub-pixel movement.")
 
-![Sub-pixel Camera](/public/images/2015-08-12/subpixelcamera.gif "And example of sub-pixel camera movement.")
+![Sub-pixel Camera](/assets/images/2015-08-12/subpixelcamera.gif "And example of sub-pixel camera movement.")
 
 I've created a simple script that you can add to child objects to lock their positions to a grid. For example, you'd have a parent GameObject which handles the player's movement, and a child GameObject that contains a SpriteRenderer. This ensure that the player can move in a sub-pixel way ensuring smooth movement, while still locking the sprite to the pixel grid.
 
@@ -54,6 +54,6 @@ public class SnapToPixelGrid : MonoBehaviour
 
 `LateUpdate()` runs every frame after all `Update()` calls are completed, and offsets the GameObject so it lies on the pixel grid determined by `pixelsPerGrid` and it's parent's location.
 
-Download the [Windows demo](/public/downloads/pixelgrid_windows.zip) or [Mac demo](/public/downloads/pixelgrid_mac.zip) to see this in action. You can also download the [example project](/public/downloads/pixelgrid.zip) to experiment with the script.
+Download the [Windows demo](/assets/downloads/pixelgrid_windows.zip) or [Mac demo](/assets/downloads/pixelgrid_mac.zip) to see this in action. You can also download the [example project](/assets/downloads/pixelgrid.zip) to experiment with the script.
 
 Hopefully this approach is enough to get you started and alleviate any 2D pixel art rendering issues. If you have any further questions please feel free to message me on Twitter [@RyanNielson](https://twitter.com/ryannielson) or comment below. 
