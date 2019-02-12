@@ -7,10 +7,10 @@ const YearPosts = ({ year, posts }) => {
       <ul className="list-reset mb-3 leading-normal">
         {posts.map(post => {
           return (
-            <li key={post.node.fields.slug} className="mb-2">
+            <li key={post.node.fields.slug} className="mb-3">
               <h3>
                 <a
-                  className="text-2xl font-normal no-underline hover:underline text-blue"
+                  className="text-2xl font-normal no-underline hover:underline text-blue leading-none"
                   href={post.node.fields.slug}
                 >
                   {post.node.frontmatter.title}
