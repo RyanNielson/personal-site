@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { FaGithub, FaTwitter, FaRss, FaGit } from 'react-icons/fa';
 
 import '../css/global.css';
 
@@ -59,52 +60,52 @@ class Layout extends React.Component {
           <main>{children}</main>
         </div>
 
-        <footer class="border-t">
-          <div class="container">
-            <div />
-            <div class="footer-col-wrapper">
-              <div class="footer-col footer-col-1">
-                <ul class="contact-list">
-                  <li class="p-name">Ryan Nielson</li>
-                  <li>
-                    <a class="u-email" href="mailto:ryan.nielson@gmail.com">
-                      ryan.nielson@gmail.com
-                    </a>
-                  </li>
-                </ul>
-              </div>
+        <footer className="border-t">
+          <div className="container py-6">
+            <div className="flex justify-between items-baseline">
+              <ul className="list-reset">
+                <li class="p-name">Ryan Nielson</li>
+                <li>
+                  <a
+                    className="text-blue no-underline hover:underline"
+                    href="mailto:ryan.nielson@gmail.com"
+                  >
+                    ryan.nielson@gmail.com
+                  </a>
+                </li>
+              </ul>
 
-              <div class="footer-col footer-col-2">
-                <ul class="social-media-list">
-                  <li>
-                    <a href="https://github.com/RyanNielson">
-                      {/* <svg class="svg-icon">
-                        <use xlink:href="/assets/minima-social-icons.svg#github" />
-                      </svg>{' '} */}
-                      <span class="username">RyanNielson</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com/RyanNielson">
-                      {/* <svg class="svg-icon">
-                        <use xlink:href="/assets/minima-social-icons.svg#twitter" />
-                      </svg>{' '} */}
-                      <span class="username">RyanNielson</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/feed.xml">
-                      {/* <svg class="svg-icon">
-                        <use xlink:href="/assets/minima-social-icons.svg#rss" />
-                      </svg>{' '} */}
-                      <span>RSS</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <ul className="list-reset">
+                <li>
+                  <a
+                    href="https://github.com/RyanNielson"
+                    className="text-blue no-underline hover:underline"
+                  >
+                    <FaGithub /> RyanNielson
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.twitter.com/RyanNielson"
+                    className="text-blue no-underline hover:underline"
+                  >
+                    <FaTwitter /> RyanNielson
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/feed.xml"
+                    className="text-blue no-underline hover:underline"
+                  >
+                    <FaRss /> RSS
+                  </a>
+                </li>
+              </ul>
 
-              <div class="footer-col footer-col-3">
-                <p>The personal site and blog of Ryan Nielson.</p>
+              <div>
+                <p className="text-grey-dark">
+                  The personal site and blog of Ryan Nielson.
+                </p>
               </div>
             </div>
           </div>
