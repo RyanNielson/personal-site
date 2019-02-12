@@ -2,16 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-// import SEO from '../components/seo';
+import SEO from '../components/seo';
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+        />
         <header className="mb-8">
           <h1 className="text-4xl font-normal leading-none mb-3">
             {post.frontmatter.title}
@@ -43,6 +46,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        description
       }
       fields {
         slug
