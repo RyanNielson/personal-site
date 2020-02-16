@@ -48,12 +48,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-39338095-2',
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: 'UA-39338095-2',
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -120,7 +120,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        // icon: `content/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-offline`,

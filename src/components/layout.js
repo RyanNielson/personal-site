@@ -25,12 +25,12 @@ class Layout extends React.Component {
               >
                 Posts
               </Link>
-              {/* <Link
+              <Link
                 to="/projects"
                 className="no-underline hover:underline text-black ml-3"
               >
                 Projects
-              </Link> */}
+              </Link>
             </nav>
           </div>
         </header>

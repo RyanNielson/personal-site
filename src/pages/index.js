@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout title={siteTitle}>
-        <SEO title="All Posts" keywords={[`blog`]} />
+        <SEO title="Ryan Nielson" keywords={[`blog`]} />
         <h1 className="text-4xl font-normal mb-3">Posts</h1>
         {postsByYear.map(({ fieldValue, edges }) => {
           return <YearPosts key={fieldValue} year={fieldValue} posts={edges} />;
