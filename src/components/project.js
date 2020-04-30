@@ -5,9 +5,9 @@ const Project = ({ title, description, url, sourceUrl, tags }) => {
   return (
     <li className="mb-3">
       <div>
-        <h3 class="inline-block  mr-2">
+        <h3 class="inline-block mr-2">
           <a
-            className="text-2xl font-normal no-underline hover:underline text-blue leading-none"
+            className="text-xl font-normal no-underline hover:underline text-blue leading-none"
             href={url}
           >
             {title}
