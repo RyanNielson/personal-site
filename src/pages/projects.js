@@ -18,6 +18,14 @@ class ProjectsIndex extends React.Component {
         sourceUrl: 'https://github.com/RyanNielson/pastehaste',
         tags: ['web development', 'react', 'typescript'],
       },
+      {
+        title: 'pollster',
+        description:
+          'A real-time anonymous polling application built with Ruby on Rails and Hotwire.',
+        url: 'https://pollster.nielson.dev',
+        sourceUrl: 'https://github.com/RyanNielson/pollster',
+        tags: ['ruby', 'ruby on rails', 'stimulus'],
+      }
     ];
 
     const gameProjects = [
