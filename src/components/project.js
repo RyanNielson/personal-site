@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const Project = ({ title, description, url, sourceUrl, tags }) => {
   return (
-    <li className="mb-3">
+    <li className="mb-6">
       <div>
         <h3 class="inline-block mr-2">
           <a
