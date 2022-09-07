@@ -22,7 +22,7 @@ class ProjectsIndex extends React.Component {
         title: 'pollster',
         description:
           'A real-time anonymous polling application built with Ruby on Rails and Hotwire.',
-        url: 'https://pollster.nielson.dev',
+        url: 'https://github.com/RyanNielson/pollster',
         sourceUrl: 'https://github.com/RyanNielson/pollster',
         tags: ['ruby', 'ruby on rails', 'stimulus'],
       }
